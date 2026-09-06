@@ -19,5 +19,5 @@ Well from my last repo, I mainly used Ubuntu + docker enginer to run all my serv
         <dd>- Proxmox Backup Server</dt>
         <dd>- 8GB of RAM</dd>
     <dt>Networking Hardware</dt>
-        <dd>- Omada EAP650 AP</dd>
+        <dd>- Omada EAP650 AP's</dd>
         <dd>- TP-Link SG108E Gigabit Switch</dd>
