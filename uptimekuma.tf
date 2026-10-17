@@ -43,7 +43,7 @@ resource "proxmox_virtual_environment_container" "uptimekuma" {
   }
 
   operating_system {
-    template_file_id = "local:vztmp/debian-13-standard_13.1-2_amd64.tar.zst"
+    template_file_id = "local:vztmp/debian-13-standard_13.1-2_amd64.tar.tzst"
     type             = "debian"
   }
 

@@ -1,23 +1,23 @@
-resource "proxmox_virtual_environment_container" "twingate" {
+resource "proxmox_virtual_environment_container" "grafana" {
   node_name     = var.proxmox_node
-  vm_id         = 106
-  description   = "twingate-connector"
-  tags          = ["terraform", "password-manager", "network", "twingate", "connector"]
+  vm_id         = 105
+  description   = "grafana"
+  tags          = ["Terraform", "Monitoring"]
   unprivileged  = true
   start_on_boot = true
 
   cpu {
-    cores = 1
+    cores = 2
   }
 
   memory {
-    dedicated = 1024
+    dedicated = 2048
     swap      = 512
   }
 
   disk {
     datastore_id = "local"
-    size         = 3
+    size         = 16
   }
 
   network_interface {
@@ -28,7 +28,6 @@ resource "proxmox_virtual_environment_container" "twingate" {
 
   features {
     nesting = true
-    keyctl  = true
   }
 
   console {
@@ -38,12 +37,12 @@ resource "proxmox_virtual_environment_container" "twingate" {
   }
 
   operating_system {
-    template_file_id = "local:vztmp/debian-13-standard_13.1-2_amd64.tar.zst"
+    template_file_id = "local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst"
     type             = "debian"
   }
 
   initialization {
-    hostname = "twingate"
+    hostname = "grafana"
 
     ip_config {
       ipv4 {

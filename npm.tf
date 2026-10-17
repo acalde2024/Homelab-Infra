@@ -21,7 +21,7 @@ resource "proxmox_virtual_environment_container" "NPM" {
 
   disk {
     datastore_id = "local"
-    size         = 8
+    size         = 10
   }
 
   network_interface {
