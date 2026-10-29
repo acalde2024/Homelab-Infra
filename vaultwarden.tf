@@ -11,7 +11,7 @@ resource "proxmox_virtual_environment_container" "vaultwarden" {
   }
 
   memory {
-    dedicated = 6144
+    dedicated = 4096
     swap      = 512
   }
 
